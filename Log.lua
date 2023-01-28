@@ -200,14 +200,19 @@ task.spawn(function()
         -- print(Beli_Beli..currency_Beli)
         -- print(unpack(list))
         -- print(unpack(List_Demon_Fruits))
-        if unpack(list) == "Cursed Dual Katana" and (unpack(List_Demon_Fruits) == "Dough-Dough") then
-            MyAccount:SetAlias('|Beli:'..Beli_Beli..currency_Beli..'|ดาบคู่'..'|โมจิกล่อง')
+        
+        if unpack(list) == "Cursed Dual Katana" and (unpack(List_Demon_Fruits) == "Dough-Dough") and Fruit == "Dough-Dough" and Awake_Val == 6  then
+            MyAccount:SetAlias('Beli:'..Beli_Beli..currency_Beli..'|โมจิตืน'..'|ดาบคู่'..'|โมจิกล่อง')
+        elseif unpack(list) == "Cursed Dual Katana" and (unpack(List_Demon_Fruits) == "Dough-Dough") and Fruit == "Dough-Dough" then
+            MyAccount:SetAlias('Beli:'..Beli_Beli..currency_Beli..'|โมจิอ่ะ'..'|ดาบคู่'..'|โมจิกล่อง')
+        elseif unpack(list) == "Cursed Dual Katana" and (unpack(List_Demon_Fruits) == "Dough-Dough") then
+            MyAccount:SetAlias('Beli:'..Beli_Beli..currency_Beli..'|ดาบคู่'..'|โมจิกล่อง')
         elseif unpack(list) == "Cursed Dual Katana" and (unpack(List_Demon_Fruits) == "Leopard-Leopard") then
-            MyAccount:SetAlias('|Beli:'..Beli_Beli..currency_Beli..'|ดาบคู่'..'|เสือกล่อง')
+            MyAccount:SetAlias('Beli:'..Beli_Beli..currency_Beli..'|ดาบคู่'..'|เสือกล่อง')
         elseif unpack(list) == "Cursed Dual Katana" then
-            MyAccount:SetAlias('|Beli:'..Beli_Beli..currency_Beli..'|ดาบคู่')
+            MyAccount:SetAlias('Beli:'..Beli_Beli..currency_Beli..'|ดาบคู่')
         else
-            MyAccount:SetAlias('|Beli:'..Beli_Beli..currency_Beli)
+            MyAccount:SetAlias('Beli:'..Beli_Beli..currency_Beli)
         end
         -- Log
         if _G.Show_FPSS == true then
@@ -342,4 +347,3 @@ task.spawn(function()
         end
     end
 end)
-
