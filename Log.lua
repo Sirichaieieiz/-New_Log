@@ -209,8 +209,12 @@ task.spawn(function()
             MyAccount:SetAlias('Beli:'..Beli_Beli..currency_Beli..'|ดาบคู่'..'|โมจิกล่อง')
         elseif unpack(list) == "Cursed Dual Katana" and (unpack(List_Demon_Fruits) == "Leopard-Leopard") then
             MyAccount:SetAlias('Beli:'..Beli_Beli..currency_Beli..'|ดาบคู่'..'|เสือกล่อง')
+        elseif unpack(list) == "Cursed Dual Katana" and Fruit == "Dough-Dough" then
+            MyAccount:SetAlias('Beli:'..Beli_Beli..'|โมจิอ่ะ'..currency_Beli..'|ดาบคู่')
         elseif unpack(list) == "Cursed Dual Katana" then
             MyAccount:SetAlias('Beli:'..Beli_Beli..currency_Beli..'|ดาบคู่')
+        elseif Fruit == "Dough-Dough" then
+            MyAccount:SetAlias('Beli:'..Beli_Beli..currency_Beli..'|โมจิอ่ะ')
         else
             MyAccount:SetAlias('Beli:'..Beli_Beli..currency_Beli)
         end
@@ -347,3 +351,4 @@ task.spawn(function()
         end
     end
 end)
+
