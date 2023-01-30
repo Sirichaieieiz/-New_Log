@@ -200,24 +200,31 @@ task.spawn(function()
         -- print(Beli_Beli..currency_Beli)
         -- print(unpack(list))
         -- print(unpack(List_Demon_Fruits))
-        
-        if unpack(list) == "Cursed Dual Katana" and (unpack(List_Demon_Fruits) == "Dough-Dough") and Fruit == "Dough-Dough" and Awake_Val == 6  then
-            MyAccount:SetAlias('Beli:'..Beli_Beli..currency_Beli..'|โมจิตืน'..'|ดาบคู่'..'|โมจิกล่อง')
-        elseif unpack(list) == "Cursed Dual Katana" and (unpack(List_Demon_Fruits) == "Dough-Dough") and Fruit == "Dough-Dough" then
-            MyAccount:SetAlias('Beli:'..Beli_Beli..currency_Beli..'|โมจิอ่ะ'..'|ดาบคู่'..'|โมจิกล่อง')
-        elseif unpack(list) == "Cursed Dual Katana" and (unpack(List_Demon_Fruits) == "Dough-Dough") then
-            MyAccount:SetAlias('Beli:'..Beli_Beli..currency_Beli..'|ดาบคู่'..'|โมจิกล่อง')
-        elseif unpack(list) == "Cursed Dual Katana" and (unpack(List_Demon_Fruits) == "Leopard-Leopard") then
-            MyAccount:SetAlias('Beli:'..Beli_Beli..currency_Beli..'|ดาบคู่'..'|เสือกล่อง')
-        elseif unpack(list) == "Cursed Dual Katana" and Fruit == "Dough-Dough" then
-            MyAccount:SetAlias('Beli:'..Beli_Beli..'|โมจิอ่ะ'..currency_Beli..'|ดาบคู่')
-        elseif unpack(list) == "Cursed Dual Katana" then
-            MyAccount:SetAlias('Beli:'..Beli_Beli..currency_Beli..'|ดาบคู่')
-        elseif Fruit == "Dough-Dough" then
-            MyAccount:SetAlias('Beli:'..Beli_Beli..currency_Beli..'|โมจิอ่ะ')
-        else
-            MyAccount:SetAlias('Beli:'..Beli_Beli..currency_Beli)
+        moji = ""
+        moji_awake = ""
+        moji_fruit = ""
+        dual = ""
+        leo_fruit = ""
+       
+
+        if unpack(list) == "Cursed Dual Katana" then
+            dual = "|ดาบคู่"
         end
+        if (unpack(List_Demon_Fruits) == "Dough-Dough") then
+            moji_fruit = "|โมจิกล่อง"
+        end
+        if Fruit == "Dough-Dough" then
+            moji = "|โมจิ"
+        end
+        if Awake_Val == 6 then
+            moji_awake = "|ตื่น"
+        end
+        if (unpack(List_Demon_Fruits) == "Leopard-Leopard") then
+            leo_fruit = "|เสือกล่อง"
+        end
+
+        MyAccount:SetAlias('Beli:'..Beli_Beli..currency_Beli..dual..moji..moji_awake..moji_fruit..leo_fruit)
+        
         -- Log
         if _G.Show_FPSS == true then
             MyAccount:SetDescription('Level : ' ..Level..'\n'
@@ -351,4 +358,3 @@ task.spawn(function()
         end
     end
 end)
-
