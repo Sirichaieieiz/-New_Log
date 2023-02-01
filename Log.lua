@@ -217,7 +217,7 @@ task.spawn(function()
             moji = "|โมจิ"
         end
         if Awake_Val == 6 then
-            moji_awake = "|ตื่น"
+            moji_awake = "ตื่น"
         end
         if (unpack(List_Demon_Fruits) == "Leopard-Leopard") then
             leo_fruit = "|เสือกล่อง"
