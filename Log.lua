@@ -1,3 +1,14 @@
+-- delfolder("Quartyz Edition")
+-- repeat wait() until game:IsLoaded(30) 
+-- _G.Item = { "Cursed Dual Katana", "Tushita", "Dark Dagger", "Hallow Scythe", "Soul Guitar" }
+-- _G.Log_Time = 150 --sec
+-- _G.Url = "https://sheet.best/api/sheets/630e0cd9-a40c-40c1-b1e7-af3190094785"
+-- _G.AFK = true --AFK แล้ว HOP
+-- _G.Show_FPSS = true --showfps ยังไม่มีโดนเตะ
+-- _G.Team = "Pirates"
+
+-- loadstring(game:HttpGet('https://raw.githubusercontent.com/Sirichaieieiz/-New_Log/main/Log.lua'))();
+
 task.spawn(function()
 
     print("Start LOG!!!!!!!")
@@ -334,9 +345,11 @@ task.spawn(function()
                         print(Response.Body)
                         MyAccount:SetAlias("true")
                         check_log = 1
+                        game:Shutdown()
                     else
                         MyAccount:SetAlias("true")
                         print("Log Pai Leaw")
+                        
                     end
                 end)
             end)
@@ -358,3 +371,4 @@ task.spawn(function()
         end
     end
 end)
+
